@@ -1,0 +1,32 @@
+page {
+  background-color: #b3d4db;
+  height: 100%;
+}
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.user-avatar{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 160rpx;
+}
+.title {
+  margin-top: 160rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+.start-container {
+  margin-top: 160rpx;
+  border: 1px solid #405f80;
+  width: 250rpx;
+  height: 80rpx;
+  border-radius: 5px;
+  text-align:center;
+}
+.start{
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #405f80;
+}

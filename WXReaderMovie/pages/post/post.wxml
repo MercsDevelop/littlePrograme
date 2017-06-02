@@ -1,0 +1,20 @@
+<import src="post-item/post-item-template.wxml" />
+<view class="classname">
+   <swiper vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000" duration="2000" circular="true">
+      <swiper-item>
+          <image src="../../images/post/110.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="../../images/post/110.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="../../images/post/110.jpg"></image>
+      </swiper-item>
+   </swiper>
+   <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+      <view catchtap="onTap" data-postId="{{item.postId}}">
+         <!--template模板-->
+         <template is="postItem" data="{{...item}}" />  
+      </view>
+   </block>
+</view>
