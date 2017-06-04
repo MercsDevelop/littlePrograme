@@ -1,17 +1,19 @@
 var postsdata = require('../../../data/posts-data.js');
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isPlayingMusic: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var global = app.globalData;
     var postid = options.id;
     this.data.currentPostId = postid;
     var postdata = postsdata.postList[postid];
@@ -33,6 +35,32 @@ Page({
       postsCollected[postid] = false;
       wx.setStorageSync('posts_collected', postsCollected);
     }
+
+    if (app.globalData.all_isPlayingMusic && app.globalData.all_currentMusicPostId === postid){
+      this.setData({
+        isPlayingMusic:true
+      })
+    }
+
+    this.setMusicMoniter();
+  },
+
+  setMusicMoniter:function(){
+    var that = this;
+    wx.onBackgroundAudioPause(function () {
+      that.setData({
+        isPlayingMusic: false
+      })
+      app.globalData.all_isPlayingMusic = false;
+      //app.globalData.all_currentMusicPostId = null
+    })
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true
+      })
+      app.globalData.all_isPlayingMusic = true;
+      //app.globalData.all_currentMusicPostId = that.data.currentPostId
+    })
   },
 
   ontap: function (event) {
@@ -86,8 +114,8 @@ Page({
     ]
     wx.showActionSheet({
       itemList: shareList,
-      itemColor:"#405f80",
-      success:function(res){
+      itemColor: "#405f80",
+      success: function (res) {
         // res.cancel用户是不是点击了取消按钮
         // res.tapIndex数组元素得序号，从0开始
         wx.showModal({
@@ -98,6 +126,26 @@ Page({
     })
   },
 
+  onMusicTap: function (event) {
+    var isPlayingMusic = this.data.isPlayingMusic;
+    var currentPostId = this.data.currentPostId;
+    if (isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    }
+    else {
+      wx.playBackgroundAudio({
+        dataUrl: postsdata.postList[currentPostId].music.dataUrl,
+        title: postsdata.postList[currentPostId].music.title,
+        coverImgUrl: postsdata.postList[currentPostId].music.coverImgUrl
+      })
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

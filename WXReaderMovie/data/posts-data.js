@@ -17,6 +17,11 @@ var local_database = [
     detail_img: {
       detail_avatar:"../../../images/avatar/avatar1.jpg",
       detail_imgSrc:"../../../images/post/content1.jpg"
+    },
+    music:{
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/C100002I8eGJ28BI17.m4a?fromtag=38',
+      title: '谭咏麟,朋友',
+      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R150x150M000004eGsCN3SUheO.jpg?max_age=2592000'
     }
   },
   {
@@ -37,6 +42,11 @@ var local_database = [
     detail_img: {
       detail_avatar: "../../../images/avatar/avatar2.jpg",
       detail_imgSrc: "../../../images/post/content2.jpg"
+    },
+    music: {
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38',
+      title: '齐秦，夜夜夜夜',
+      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000'
     }
   },
   {
@@ -57,6 +67,11 @@ var local_database = [
     detail_img: {
       detail_avatar: "../../../images/avatar/avatar3.jpg",
       detail_imgSrc: "../../../images/post/content3.jpeg"
+    },
+    music: {
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/C100003GdCmG4NkEOR.m4a?fromtag=38',
+      title: '李宗盛，鬼迷心窍',
+      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R150x150M000002xOmp62kqSic.jpg?max_age=2592000'
     }
   },
   {
@@ -77,6 +92,11 @@ var local_database = [
     detail_img: {
       detail_avatar: "../../../images/avatar/avatar4.jpg",
       detail_imgSrc: "../../../images/post/content4.jpg"
+    },
+    music: {
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/C100004HLusI2lLjZy.m4a?fromtag=38',
+      title: '万晓利，女儿情',
+      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R150x150M000004Wv5BO30pPc0.jpg?max_age=2592000'
     }
   },
   {
@@ -97,6 +117,11 @@ var local_database = [
     detail_img: {
       detail_avatar: "../../../images/avatar/avatar5.jpg",
       detail_imgSrc: "../../../images/post/content5.jpg"
+    },
+    music: {
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/C100002mWVx72p8Ugp.m4a?fromtag=38',
+      title: '老狼，恋恋风尘',
+      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R150x150M000001VaXQX1Z1Imq.jpg?max_age=2592000'
     }
   }
 ]
