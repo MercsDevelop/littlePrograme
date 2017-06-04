@@ -1,7 +1,7 @@
 <!--先静后动，先样式后数据-->
 <view class="container">
-  <image class="head-image" src="{{post_data.detail_img.detail_imgSrc}}"></image>
-  <image class="audio" src="../../../images/music/music.png"></image>
+  <image class="head-image" src="{{isPlayingMusic?post_data.music.coverImgUrl:post_data.detail_img.detail_imgSrc}}"></image>
+  <image class="audio" catchtap="onMusicTap" src="{{isPlayingMusic?'../../../images/music/pause.png':'../../../images/music/music.png'}}"></image>
   <view class="author-data">
     <image class="avatar" src="{{post_data.detail_img.detail_avatar}}"></image>
     <text class="author-name">{{post_data.author}}</text>
