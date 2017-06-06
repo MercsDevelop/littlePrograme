@@ -2,9 +2,20 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/post/post",
-    "pages/post/post-detail/post-detail"
+    "pages/post/post-detail/post-detail",
+    "pages/movies/movie"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/post/post",
+      "text": "text"
+    },
+    {
+      "pagePath": "pages/movies/movie",
+      "text": "text"
+    }]
   }
 }

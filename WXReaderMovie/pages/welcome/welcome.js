@@ -1,9 +1,6 @@
 Page({
   ontap:function(){
-    // wx.navigateTo({
-    //   url: '../post/post',
-    // })
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../post/post',
     })
   }
