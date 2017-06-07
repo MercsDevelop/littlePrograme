@@ -1,7 +1,7 @@
 <view class="container">
     <image class="user-avatar" src="/images/post/110.jpg"></image>
     <text class="title">youtube精选</text>
-    <view class="start-container" bindtap="ontap">
-        <text class="start">开启youtube之旅</text>
+    <view class="start-container" catchtap="ontap">
+        <text class="start" bindtap="ontap">开启youtube之旅</text>
     </view>
 </view>

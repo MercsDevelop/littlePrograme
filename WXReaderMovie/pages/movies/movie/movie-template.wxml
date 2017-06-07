@@ -1,0 +1,8 @@
+<import src="../stars/star-template.wxml" />
+<template name="moviesTempalte">
+  <view class="classname">
+    <image src="../../../images/movie/wolfwarrior2.jpg"></image>
+    <text>战狼2</text>
+    <template is="starsTemplate" />
+  </view>
+</template>

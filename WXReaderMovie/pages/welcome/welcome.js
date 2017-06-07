@@ -1,6 +1,6 @@
 Page({
   ontap:function(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '../post/post',
     })
   }

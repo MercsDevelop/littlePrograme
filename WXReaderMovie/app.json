@@ -9,13 +9,20 @@
     "navigationBarBackgroundColor": "#405f80"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/post/post",
-      "text": "text"
-    },
-    {
-      "pagePath": "pages/movies/movie",
-      "text": "text"
-    }]
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/post/post",
+        "text": "新闻",
+        "iconPath": "images/tab/mePic.png",
+        "selectedIconPath":"images/tab/newsPic.png"
+      },
+      {
+        "pagePath": "pages/movies/movie",
+        "text": "电影",
+        "iconPath": "images/tab/moviePic.png",
+        "selectedIconPath": "images/tab/moviePic.png"
+      }
+    ]
   }
 }
