@@ -1,7 +1,8 @@
  App({
   globalData:{
     all_isPlayingMusic:false,
-    all_currentMusicPostId:null
+    all_currentMusicPostId:null,
+    doubanBase:"https://api.douban.com"
   }, 
 
   /**
